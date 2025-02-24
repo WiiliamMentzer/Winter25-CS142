@@ -6,7 +6,7 @@ import java.util.*;
 
 public class Birthdays {
 
-    /*  
+    /*
     This will acquire the users's birthdays and todays date.
     Takes in a scanner, nabs the info and shoots it into an array.
     Then uses the same initialized array to convert the second to last index (index 4 is used later in birthdayProcessing) to the absolute day version (1-366)
@@ -21,7 +21,7 @@ public class Birthdays {
         return date;
     }
 
-    /*  
+    /*
     Converts array values into absolute value stored in the second last index of the array via cumunulative addition, check what months it is and how many days are in each.
     Then back into userInputMonthDay.
     */
@@ -43,7 +43,7 @@ public class Birthdays {
         return absoluteDay;
     }
 
-    /*  
+    /*
     This processes most of the information needed about ones birthday.
     Initially checks how many days away until the birthday.
     creates a new value percetnAway that is used and stored later in the last index of []bday
@@ -51,10 +51,8 @@ public class Birthdays {
     finally it shows the percentage of a year until its the birthday and stores the percent away in the last index using whole numbers so it circumvents the issue of lossy double storage in the conversion.
     */
     public static void birthdayInfoDump(int[] bday, int[] currentDate){
-        int daysAway = (366-currentDate[2]) - (366-bday[2]);
-        if(daysAway < 0){
-            daysAway += 366;
-        }
+        int daysAway = ((366-currentDate[2]) - (366-bday[2]) + 366) % 366;
+
         double percentAway = (daysAway/366.0) * 100;
 
         System.out.printf("%d/%d/2020 falls on day #%d of 366.\n", bday[0], bday[1], bday[2]);
@@ -69,7 +67,7 @@ public class Birthdays {
         bday[3] = (int)(percentAway * 100);
     }
 
-    /*  
+    /*
     This takes in 2 bdays arrays
     will check which value of the last index is bigger and will look for the lesser of the two as to which birthday is closer.
     */
@@ -81,10 +79,10 @@ public class Birthdays {
         } else {
             System.out.println("\n Person 2's birthday is sooner. \n");
         }
-        
+
     }
 
-    /*  
+    /*
     This will just check if the user wants to repeat the program since its an infinite loop.
     */
     public static boolean repeatDecider( Scanner in){
@@ -99,7 +97,7 @@ public class Birthdays {
         }
     }
 
-     
+
     //This will show you how awesome my birthday fun fact is.
     public static void birthdayFunFact(){
         System.out.println("April 8th is National All Is Ours Day!");
@@ -125,7 +123,7 @@ public class Birthdays {
             System.out.print("What month and day were you born? "); // 10 17
             int[] person1Bday = userInputMonthDay(input, false);
             birthdayInfoDump(person1Bday, todaysDate);
-            
+
             // 10/17/2020 falls on day #291 of 366.
             // Your next birthday is in 262 day(s).
             // That is 71.6 percent of a year away.
