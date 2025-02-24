@@ -13,5 +13,10 @@ public class practiceMidterm {
         }
         System.out.printf("%d reservations \n", reservCount);
         System.out.printf("Total number of people coming to the restaurant: %d \n", totalBodyCount);
+
+        int a = 3;
+        double b = 4.0;
+
+        System.out.println(a/b);
     }
 }
