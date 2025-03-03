@@ -29,7 +29,8 @@ public class Point {
   }
 
   public String toString() {
-    return "()";
+    String tempNewString = "("+ String.valueOf(this.x) +" , "+ String.valueOf(this.y) + ")";
+    return tempNewString;
   }
 
 }
