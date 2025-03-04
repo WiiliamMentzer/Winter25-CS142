@@ -1,5 +1,7 @@
 public class Lecture16 {
 
+  //Lecture 16 by William Mentzer for CS-142
+  //Note: added all the classes to the bottom to keep 1 java file instead of sending 4 java files.
   public static void main(String[] args) {
     System.out.println();
     System.out.println("Hello, world!");
@@ -79,4 +81,71 @@ public class Lecture16 {
 
     jan1.clean();
   }
+}
+
+class Employee {
+
+  private int years;
+
+  public Employee(int initialYears) {
+      years = initialYears;
+  }
+
+  public int getHours() {
+      return 40;
+  }
+
+  public double getSalary() {
+      return 40000.0;
+  }
+
+  public int getVacationDays() {
+      return 10;
+  }
+
+  public String getVacationForm() {
+      return "yellow";
+  }
+
+}
+
+
+class Janitor extends Employee {
+
+  public Janitor(int years) {
+      super(years);
+  }
+
+  public void clean() {
+      System.out.println("Workin for the man");
+  }
+
+  public int getHours() {
+      return super.getHours() * 2;
+  }
+
+  public double getSalary() {
+      return super.getSalary() - 10000;
+  }
+
+  public int getVacationDays() {
+      return super.getVacationDays() / 2;
+  }
+
+}
+
+class Marketer extends Employee {
+
+  public Marketer(int years) {
+      super(years);
+  }
+
+  public void advertise() {
+      System.out.println("Act now while supplies last!");
+  }
+
+  public double getSalary() {
+      return super.getSalary() + 10000.0;
+  }
+
 }
