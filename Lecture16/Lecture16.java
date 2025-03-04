@@ -23,24 +23,60 @@ public class Lecture16 {
     //If the super is used it will pull that value from its inhereted class. classB will take classA's name for example.
 
     // Put your answer for #5 here:
-    //
+    // Yes it does, the UnderZGradStudent will have its fields privated to the object.
 
     // Put your answer for #6 here:
-    //
+    /*
+    public underGradStudent (int yearInit, int age) { 
+        this.year = yearInit; 
+        this.age = super(age);
+    }
+    */
 
     // Put your answer for #7 here:
-    //
+    /*
+    public void setAge (int age) { 
+    this.age = age;
+    this.year++;
+    }
+    */
 
     // Put your answer for #8 here:
-    //
+    /*
+    vroom
+    Car1
+    Car2
+    vroom vroom
+    Truck1
+    Car2
+    */
 
     // Put your answer for #9 here:
-    //
+    /*
+
+    vroom vroom
+    Truck1
+    Car1
+
+    */
 
     // EXERCISES:
 
     // Put your answer for #1 in this repo
+    Marketer mark1 = new Marketer(10);
+    mark1.advertise();
+    System.out.println(mark1.getSalary());
+    System.out.println(mark1.getVacationDays());
+    System.out.println(mark1.getHours());
+    
+
 
     // Put your answer for #2 in this repo
+    Janitor jan1 = new Janitor(5);
+    System.out.println(jan1.getVacationDays());
+    System.out.println(jan1.getSalary());
+    System.out.println(jan1.getVacationForm());
+
+    jan1.clean();
   }
 }

@@ -34,7 +34,7 @@ public class Name {
     }
 
     public void newFirstName(String newFN){
-        firstName = newFN;
+        this.firstName = newFN;
     }
 
     public void newMiddleInitial(String newMI){
