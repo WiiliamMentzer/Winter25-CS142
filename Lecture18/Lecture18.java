@@ -15,9 +15,6 @@ public class Lecture18 {
     // Put your answer for #23 here:
     //Class c must have a m1 and m2 method for it to compile successfully.
 
-    // Put your answer for #24 here:
-    //? missing on page ?
-
     // Put your answer for #25 here:
     //See Line 35-37 and 44-54
 
